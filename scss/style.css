@@ -1395,7 +1395,6 @@ ul {
   z-index: 1;
   -webkit-box-shadow: 0px 40px 91px -37px rgba(231, 39, 39, 0.5);
           box-shadow: 0px 40px 91px -37px rgba(231, 39, 39, 0.5);
-  margin-bottom: 50px;
 }
 
 @media (max-width: 991px) {
