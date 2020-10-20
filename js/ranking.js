@@ -1,25 +1,25 @@
 const apiUrl = "https://sprintbreak.nerdear.live/ranking";
 
 function renderRanking(data) {
-    var rankingData;
+    var rankingNames = document.querySelector('.premios-dos .ranking-names');
     var rankingDomOl = document.querySelector('.premios-dos .ranking-names ol');
     rankingDomOl.remove();
     // var newRankingNames = document.createElement("div").className("ranking-names");
     var newOrdList = document.createElement("ol");
-    rankingData = data.slice(0, 5); // Los primeros 6
+    var rankingData = data.slice(0, 5); // Los primeros 6
+    console.log(rankingData);
     rankingData.map(e => {
         var li = document.createElement("li");
         li.textContent = e.username;
         newOrdList.appendChild(li);
     })
-    rankingDomOl.appendChild(newOrdList);
+    rankingNames.appendChild(newOrdList);
 }
 
 function getRanking() {
     fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         renderRanking(data);
     })
 }
@@ -32,5 +32,5 @@ function getRanking() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    // getRanking();
+    getRanking();
 });
