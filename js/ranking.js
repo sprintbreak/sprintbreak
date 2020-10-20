@@ -32,5 +32,5 @@ function getRanking() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    getRanking();
+    // getRanking();
 });
