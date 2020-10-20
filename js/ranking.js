@@ -28,20 +28,16 @@ function getRankingDay() {
     .then(response => response.json())
     .then(data => {
         var rankingDayData = data[todayParsed].slice(0, 6);
-        // console.log(rankingDayData);
-        rankingDayData.map(e => console.log(e))
-        // var rankingNames = document.querySelector('.premios-uno .ranking-names');
-        // var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
-        // rankingDomOl.remove();
-        // var newOrdList = document.createElement("ol");
-        // var rankingData = data.slice(0, 6); // Los primeros 6
-        // console.log(rankingData);
-        // rankingData.map(e => {
-        //     var li = document.createElement("li");
-        //     li.textContent = e.username;
-        //     newOrdList.appendChild(li);
-        // })
-        // rankingNames.appendChild(newOrdList);
+        var rankingNames = document.querySelector('.premios-uno .ranking-names');
+        var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
+        rankingDomOl.remove();
+        var newOrdList = document.createElement("ol");
+        rankingDayData.map(e => {
+            var li = document.createElement("li");
+            li.textContent = e..user.username;
+            newOrdList.appendChild(li);
+        })
+        rankingNames.appendChild(newOrdList);
     })
 }
 
