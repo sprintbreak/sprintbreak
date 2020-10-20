@@ -27,8 +27,9 @@ function getRankingDay() {
     fetch(apiUrlDay)
     .then(response => response.json())
     .then(data => {
-        console.log(data[todayParsed]);
-        
+        var rankingDayData = data[todayParsed].slice(0, 6);
+        // console.log(rankingDayData);
+        rankingDayData.map(e => console.log(e))
         // var rankingNames = document.querySelector('.premios-uno .ranking-names');
         // var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
         // rankingDomOl.remove();
