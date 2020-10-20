@@ -1,4 +1,5 @@
 const apiUrl = "https://sprintbreak.nerdear.live/ranking";
+const apiUrlDay = "https://sprintbreak.nerdear.live/ranking";
 
 function getRanking() {
     fetch(apiUrl)
@@ -7,7 +8,6 @@ function getRanking() {
         var rankingNames = document.querySelector('.premios-dos .ranking-names');
         var rankingDomOl = document.querySelector('.premios-dos .ranking-names ol');
         rankingDomOl.remove();
-        // var newRankingNames = document.createElement("div").className("ranking-names");
         var newOrdList = document.createElement("ol");
         var rankingData = data.slice(0, 6); // Los primeros 6
         console.log(rankingData);
@@ -20,13 +20,27 @@ function getRanking() {
     })
 }
 
-// function getRankingDay() {
-//     var rankingData;
-//     var rankingDom = document.querySelector('.premios-uno .ranking-names');
-//     var ordList = document.createElement("ol");
-// }
+function getRankingDay() {
+    fetch(apiUrlDay)
+    .then(response => response.json())
+    .then(data => {
+        var rankingNames = document.querySelector('.premios-uno .ranking-names');
+        var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
+        rankingDomOl.remove();
+        var newOrdList = document.createElement("ol");
+        var rankingData = data.slice(0, 6); // Los primeros 6
+        console.log(rankingData);
+        rankingData.map(e => {
+            var li = document.createElement("li");
+            li.textContent = e.username;
+            newOrdList.appendChild(li);
+        })
+        rankingNames.appendChild(newOrdList);
+    })
+}
 
 
 document.addEventListener('DOMContentLoaded', function () {
+    getRankingDay();
     getRanking();
 });
