@@ -9,12 +9,13 @@ function getRanking() {
     .then(data => {
         console.log(data);
         rankingData = data.slice(0, 5); // Los primeros 6
-        rankingDom.remove();
+        rankingDom.removeChild();
         rankingData.map(e => {
             var li = document.createElement("li");
             li.textContent = e.username;
             ordList.appendChild(li);
         })
+        rankingDom.appendChild(ordList);
     })
 }
 
