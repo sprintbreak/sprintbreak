@@ -9,7 +9,7 @@ function getRanking() {
         rankingDomOl.remove();
         // var newRankingNames = document.createElement("div").className("ranking-names");
         var newOrdList = document.createElement("ol");
-        var rankingData = data.slice(0, 5); // Los primeros 6
+        var rankingData = data.slice(0, 6); // Los primeros 6
         console.log(rankingData);
         rankingData.map(e => {
             var li = document.createElement("li");
