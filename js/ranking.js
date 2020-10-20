@@ -41,6 +41,6 @@ function getRankingDay() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    getRankingDay();
+    // getRankingDay();
     getRanking();
 });
