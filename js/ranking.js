@@ -23,18 +23,17 @@ function getRanking() {
 function getRankingDay() {
     var date = new Date();
     var todayParsed = dayjs(date).format("YYYY-MM-DD");
-    console.log(todayParsed);
     fetch(apiUrlDay)
     .then(response => response.json())
     .then(data => {
-        var rankingDayData = data[todayParsed].slice(0, 6);
         var rankingNames = document.querySelector('.premios-uno .ranking-names');
         var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
         rankingDomOl.remove();
         var newOrdList = document.createElement("ol");
+        var rankingDayData = data[todayParsed].slice(0, 6);
         rankingDayData.map(e => {
             var li = document.createElement("li");
-            li.textContent = e..user.username;
+            li.textContent = e.user.username;
             newOrdList.appendChild(li);
         })
         rankingNames.appendChild(newOrdList);
