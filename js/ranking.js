@@ -21,10 +21,14 @@ function getRanking() {
 }
 
 function getRankingDay() {
+    var date = new Date();
+    var todayParsed = dayjs(date).format("YYYY-MM-DD");
+    console.log(todayParsed);
     fetch(apiUrlDay)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        console.log(data[todayParsed]);
+        
         // var rankingNames = document.querySelector('.premios-uno .ranking-names');
         // var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
         // rankingDomOl.remove();
