@@ -4722,5 +4722,27 @@ h6 {
   margin-left: 8rem;
 }
 
+@media screen and (min-device-width: 360px) and (max-device-height: 820px) {
+  .ranking-area .premios .premios-uno, .ranking-area .premios .premios-dos {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .ranking-area .premios .ranking-names {
+    text-align: left;
+    width: 100%;
+  }
+  .ranking-area .premios .premios-img {
+    margin-left: 0;
+  }
+  .ranking-area .premios .premios-img img {
+    width: 150px;
+  }
+}
+
 /*---------------------------------------------------- */
 /*# sourceMappingURL=style.css.map */

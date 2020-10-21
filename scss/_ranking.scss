@@ -56,6 +56,28 @@
         .premios-img {
             margin-left: 8rem;
         }
+
+        @media screen 
+        and (min-device-width: 360px) 
+        and (max-device-height: 820px) {
+
+            .premios-uno, .premios-dos {
+                flex-direction: column !important;
+                justify-content: space-between;
+            }
+
+            .ranking-names {
+                text-align: left;
+                width: 100%;
+            }
+
+            .premios-img {
+                margin-left: 0;
+                img {
+                    width: 150px;
+                }
+            }
+        }
     
     }
 }
