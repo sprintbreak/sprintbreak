@@ -62,8 +62,8 @@
         and (max-device-height: 820px) {
 
             .premios-uno, .premios-dos {
-                flex-direction: column !important;
-                justify-content: space-between;
+                flex-direction: column-reverse !important;
+                justify-content: space-around;
             }
 
             .ranking-names {
@@ -72,7 +72,8 @@
             }
 
             .premios-img {
-                margin-left: 0;
+                margin: 2.5rem 0;
+                margin-left: 0 !important;
                 img {
                     width: 150px;
                 }
