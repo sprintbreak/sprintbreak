@@ -26,16 +26,28 @@ function getRankingDay() {
     fetch(apiUrlDay)
     .then(response => response.json())
     .then(data => {
+
         var rankingNames = document.querySelector('.premios-uno .ranking-names');
         var rankingDomOl = document.querySelector('.premios-uno .ranking-names ol');
-        rankingDomOl.remove();
         var newOrdList = document.createElement("ol");
+
+        rankingDomOl.remove();
+        
         var rankingDayData = data[todayParsed].slice(0, 6);
+        var array = [{
+            "user": {
+                "username": "jorge.carachiolo"
+            }
+        }];
+        array.push(rankingDayData);
+        console.log(array);
+
         rankingDayData.map(e => {
             var li = document.createElement("li");
             li.textContent = e.user.username;
             newOrdList.appendChild(li);
         })
+
         rankingNames.appendChild(newOrdList);
     })
 }
