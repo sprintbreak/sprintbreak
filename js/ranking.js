@@ -41,8 +41,6 @@ function getRankingDay() {
             "username": "jorge.carachiolo"
         };
         testArray.unshift(array);
-        console.log(testArray);
-        console.log(rankingDayData);
         // =======
 
         testArray.map(e => {
