@@ -37,11 +37,11 @@ function getRankingDay() {
 
         // ======
         var testArray = rankingDayData;
-        var array = [{
+        var array = {
             "user": {
                 "username": "jorge.carachiolo"
             }
-        }];
+        };
         testArray.unshift(array);
         console.log(testArray);
         // =======
