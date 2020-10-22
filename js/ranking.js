@@ -47,7 +47,7 @@ function getRankingDay() {
         console.log(rankingDayData);
         // =======
 
-        rankingDayData.map(e => {
+        testArray.map(e => {
             var li = document.createElement("li");
             li.textContent = e.user.username;
             newOrdList.appendChild(li);
