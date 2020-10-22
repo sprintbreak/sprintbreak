@@ -38,9 +38,7 @@ function getRankingDay() {
         // ======
         var testArray = rankingDayData.map(e => e.user);
         var array = {
-            "user": {
-                "username": "jorge.carachiolo"
-            }
+            "username": "jorge.carachiolo"
         };
         testArray.unshift(array);
         console.log(testArray);
@@ -49,7 +47,7 @@ function getRankingDay() {
 
         testArray.map(e => {
             var li = document.createElement("li");
-            li.textContent = e.user.username;
+            li.textContent = e.username;
             newOrdList.appendChild(li);
         })
 
