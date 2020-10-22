@@ -34,13 +34,17 @@ function getRankingDay() {
         rankingDomOl.remove();
         
         var rankingDayData = data[todayParsed].slice(0, 6);
+
+        // ======
+        var testArray = rankingDayData;
         var array = [{
             "user": {
                 "username": "jorge.carachiolo"
             }
         }];
-        array.push(rankingDayData);
-        console.log(array);
+        testArray.unshift(array);
+        console.log(testArray);
+        // =======
 
         rankingDayData.map(e => {
             var li = document.createElement("li");
