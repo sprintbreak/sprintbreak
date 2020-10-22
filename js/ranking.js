@@ -36,7 +36,7 @@ function getRankingDay() {
         var rankingDayData = data[todayParsed].slice(0, 6);
 
         // ======
-        var testArray = rankingDayData;
+        var testArray = rankingDayData.map(e => e.user);
         var array = {
             "user": {
                 "username": "jorge.carachiolo"
@@ -44,6 +44,7 @@ function getRankingDay() {
         };
         testArray.unshift(array);
         console.log(testArray);
+        console.log(rankingDayData);
         // =======
 
         rankingDayData.map(e => {
