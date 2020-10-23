@@ -35,15 +35,15 @@ function getRankingDay() {
         
         var rankingDayData = data[todayParsed].slice(0, 6);
 
-        // ======
-        var testArray = rankingDayData.map(e => e.user);
-        var array = {
-            "username": "jorge.carachiolo"
-        };
-        testArray.unshift(array);
-        // =======
+        // // ======
+        // var testArray = rankingDayData.map(e => e.user);
+        // var array = {
+        //     "username": "jorge.carachiolo"
+        // };
+        // testArray.unshift(array);
+        // // =======
 
-        testArray.map(e => {
+        rankingDayData.map(e => {
             var li = document.createElement("li");
             li.textContent = e.username;
             newOrdList.appendChild(li);
