@@ -45,7 +45,7 @@ function getRankingDay() {
 
         rankingDayData.map(e => {
             var li = document.createElement("li");
-            li.textContent = e.username;
+            li.textContent = e.user.username;
             newOrdList.appendChild(li);
         })
 
