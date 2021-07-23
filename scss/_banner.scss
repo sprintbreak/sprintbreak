@@ -1,6 +1,6 @@
 //--------- Start Home Banner Area -------------//
 .home_banner_area {
-    background: url(../img/home.jpg) no-repeat center top;
+    background: url(../img/header.jpg) no-repeat center top;
     background-size: cover;
     position: relative;
     z-index: 1;
@@ -12,7 +12,7 @@
         background-size: cover;
         .banner_inner {
             .banner-left {
-                padding: 30px 53px;
+                padding: 30px 53px;    
                 @media (max-width: 991px) {
                     padding: 30px 20px;
                 }
